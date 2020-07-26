@@ -6,6 +6,8 @@
   "UniqueID": "PurrplingCat.DialogueEmotes",
   "EntryDll": "DialogueEmotes.dll",
   "MinimumApiVersion": "3.6.1",
-  "UpdateKeys": [],
+  "UpdateKeys": [
+    "Nexus:6537"
+  ],
   "Dependencies": []
 }
