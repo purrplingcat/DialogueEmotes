@@ -28,12 +28,16 @@ namespace DialogueEmotes
             if (Game1.activeClickableMenu is DialogueBox dialogueBox && Game1.CurrentEvent == null)
             {
                 var dialogue = this.Helper.Reflection.GetField<Dialogue>(dialogueBox, "characterDialogue").GetValue();
-                var currentEmotion = this.GetEmotion(dialogue);
 
-                if (dialogue != null && currentEmotion != this.lastEmotion)
+                if (dialogue != null)
                 {
-                    this.lastEmotion = currentEmotion;
-                    this.ShowLastEmote(dialogue.speaker);
+                    var currentEmotion = this.GetEmotion(dialogue);
+
+                    if (currentEmotion != this.lastEmotion)
+                    {
+                        this.lastEmotion = currentEmotion;
+                        this.ShowLastEmote(dialogue.speaker);
+                    }
                 }
             }
         }
